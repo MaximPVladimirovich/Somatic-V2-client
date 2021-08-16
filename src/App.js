@@ -10,8 +10,15 @@ const theme = createTheme({
       main: '#FFFFFF',
     },
     secondary: {
-      main: '#FFFFFF',
+      main: '#18A0FB',
     },
+    background: {
+      paper: '#BDBDBD',
+    },
+    text: {
+      white: '#FFFFFF',
+      black: '000000'
+    }
   },
 });
 
