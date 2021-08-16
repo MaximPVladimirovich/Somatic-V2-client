@@ -3,6 +3,7 @@ import { ThemeProvider } from '@material-ui/core/styles'
 import { createTheme } from '@material-ui/core/styles'
 import './App.css';
 import Navbar from './components/Navbar'
+import SimpleCard from './components/gallery/Card'
 
 const theme = createTheme({
   palette: {
@@ -29,6 +30,7 @@ function App() {
       <div className="App">
         <Navbar />
       </div>
+      <SimpleCard />
     </ThemeProvider>
 
   );
