@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-// import StudioCard from './StudioCard'
+import StudioCard from './StudioCard'
 // import Card from '@material-ui/core/Card';
 // import CardActions from '@material-ui/core/CardActions';
 // import CardContent from '@material-ui/core/CardContent';
@@ -36,9 +36,8 @@ export default function CardGrid() {
   const loaded = function () {
     return studios.map(studio => {
       return (
-        <div>
-          <h1>{studio.name}</h1>
-        </div >);
+        <StudioCard key={studio.id} studio={studio} />
+      );
     })
   }
   return (
