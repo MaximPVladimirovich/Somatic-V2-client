@@ -24,9 +24,11 @@ export default function StudioCard(props) {
 
   return (
     <Card className={classes.root}>
-      <CardMedia
+      {props.studio.img ? (<CardMedia
+        component="img"
         image={props.studio.img}
-      />
+      />) : (<h1>Loading...</h1>)}
+
       <CardActionArea>
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
