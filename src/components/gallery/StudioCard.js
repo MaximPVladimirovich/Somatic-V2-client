@@ -16,16 +16,30 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
   paper: {
-    marginTop: theme.spacing(4),
-    marginLeft: 'auto',
-    marginRight: 'auto',
-    width: '75%',
-    height: theme.spacing(20),
-    maxWidth: 500,
+    padding: theme.spacing(2),
+    margin: 'auto',
+    marginTop: 20,
+    maxWidth: 400,
+    backgroundColor: '#FFFFFF',
+  },
+  img: {
+    width: 128,
+    height: 128,
+
+  },
+  image: {
+    margin: 'auto',
+    display: 'block',
+    maxWidth: '100%',
+    maxHeight: '100%',
+
   },
   media: {
     height: 0,
     paddingTop: '56.25%', // 16:9
+  },
+  name: {
+    fontWeight: 'Bold',
   }
 }));
 
@@ -34,8 +48,28 @@ export default function StudioCard(props) {
 
   return (
     <div className={classes.root}>
-      <Paper className={classes.paper} variant="outlined" square />
-    </div>
+      <Paper className={classes.paper} variant="outlined" square>
+        <Grid container spacing={2}>
+          <Grid item xs>
+            <img className={classes.image} alt={'Not found'} src={props.studio.img} />
+          </Grid>
+          <Grid item xs container direction="column" spacing={3}>
+            <Grid item >
+              <Typography gutterBottom>{props.studio.categories}</Typography>
+            </Grid>
+            <Grid item >
+              <Typography gutterBottom className={classes.name}>{props.studio.name}</Typography>
+            </Grid>
+            <Grid item >
+              <Typography>{props.studio.city}</Typography>
+            </Grid>
+
+          </Grid>
+
+        </Grid>
+      </Paper >
+
+    </div >
 
   )
 }
