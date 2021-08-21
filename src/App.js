@@ -4,6 +4,7 @@ import { createTheme } from '@material-ui/core/styles'
 import './App.css';
 import Navbar from './components/Navbar'
 import CardGrid from './components/gallery/CardGrid'
+import HomeImage from './components/home_image/Home_image'
 
 const theme = createTheme({
   palette: {
@@ -28,6 +29,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <Navbar />
+      <HomeImage />
       <CardGrid />
     </ThemeProvider>
 

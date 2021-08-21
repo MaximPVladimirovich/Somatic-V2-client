@@ -53,17 +53,10 @@ export default function StudioCard(props) {
           <Grid item xs>
             <img className={classes.image} alt={'Not found'} src={props.studio.img} />
           </Grid>
-          <Grid item xs container direction="column" spacing={3}>
-            <Grid item >
-              <Typography gutterBottom>{props.studio.categories}</Typography>
-            </Grid>
-            <Grid item >
-              <Typography gutterBottom className={classes.name}>{props.studio.name}</Typography>
-            </Grid>
-            <Grid item >
-              <Typography>{props.studio.city}</Typography>
-            </Grid>
-
+          <Grid item xs container direction="column" spacing={1}>
+            <Typography variant="body2" color="textSecondary">{props.studio.categories}</Typography>
+            <Typography gutterBottom className={classes.name}>{props.studio.name}</Typography>
+            <Typography>{props.studio.city}</Typography>
           </Grid>
 
         </Grid>
