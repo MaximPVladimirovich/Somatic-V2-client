@@ -1,52 +1,41 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
-import Card from '@material-ui/core/Card'
+import Paper from '@material-ui/core/Paper'
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardMedia from '@material-ui/core/CardMedia';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 import CardActions from '@material-ui/core/CardActions';
 import Button from '@material-ui/core/Button';
+import Grid from '@material-ui/core/Grid'
 
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   root: {
-    maxWidth: 345,
+    display: 'flex',
+    flexGrow: 1,
+  },
+  paper: {
+    marginTop: theme.spacing(4),
+    marginLeft: 'auto',
+    marginRight: 'auto',
+    width: '75%',
+    height: theme.spacing(20),
+    maxWidth: 500,
   },
   media: {
     height: 0,
     paddingTop: '56.25%', // 16:9
   }
-});
+}));
 
 export default function StudioCard(props) {
   const classes = useStyles()
 
   return (
-    <Card className={classes.root}>
-      {props.studio.img ? (<CardMedia
-        component="img"
-        image={props.studio.img}
-      />) : (<h1>Loading...</h1>)}
+    <div className={classes.root}>
+      <Paper className={classes.paper} variant="outlined" square />
+    </div>
 
-      <CardActionArea>
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
-            {props.studio.name}
-          </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
-            {props.studio.description}
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-      <CardActions>
-        <Button size="small" color="primary">
-          Share
-        </Button>
-        <Button size="small" color="primary">
-          Learn More
-        </Button>
-      </CardActions>
-    </Card>
   )
 }
