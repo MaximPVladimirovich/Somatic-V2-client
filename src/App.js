@@ -22,6 +22,13 @@ const theme = createTheme({
       black: '000000'
     }
   },
+  overrides: {
+    MuiButton: {
+      root: {
+        borderRadius: 20,
+      },
+    },
+  },
 });
 
 
