@@ -29,7 +29,7 @@ export default function PrimaryButton() {
   return (
     <Grid container direction="column" alignItems="center" justifyContent="space-between">
       <Grid item xs={12}>
-        <Button className={classes.primary_btn} color="secondary" variant="outlined" >GetStarted</Button>
+        <Button className={classes.primary_btn} color="secondary" variant="outlined" >Get Started</Button>
       </Grid>
       <Grid item xs={12}>
         <Button className={classes.secondary_btn} variant="outlined" >Explore classes</Button>
