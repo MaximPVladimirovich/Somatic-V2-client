@@ -37,8 +37,8 @@ export default function HomeImage() {
       </Card>
       <Typography className={classes.text}>Easily find the classes you want and start moving.</Typography>
       <Grid container direction='column' justifyContent='center' alignItems='center' >
-        <Link to="/signup"><PrimaryButton /></Link>
-        <Link to='/classes'><SecondaryButton /></Link>
+        <Link to="/signup"><PrimaryButton text={'Get Started'} /></Link>
+        <Link to='/classes'><SecondaryButton text={'Explore Classes'} /></Link>
       </Grid>
 
     </>

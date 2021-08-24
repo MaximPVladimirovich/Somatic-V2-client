@@ -23,16 +23,16 @@ const useStyles = makeStyles((theme) => ({
   },
 }))
 
-export default function PrimaryButton() {
+export default function PrimaryButton(props) {
   const classes = useStyles()
   return (
-    <Button className={classes.primary_btn} color="secondary" variant="outlined" >Get Started</Button>
+    <Button className={classes.primary_btn} color="secondary" variant="outlined" >{props.text}</Button>
   )
 }
 
-export function SecondaryButton() {
+export function SecondaryButton(props) {
   const classes = useStyles()
   return (
-    <Button className={classes.secondary_btn} variant="outlined" >Explore classes</Button>
+    <Button className={classes.secondary_btn} variant="outlined" >{props.text}</Button>
   )
 }

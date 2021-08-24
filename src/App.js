@@ -9,7 +9,7 @@ import { Route, Switch } from 'react-router-dom'
 // Pages
 import Home from './Pages/Home'
 import Classes from './Pages/classes'
-import SignUp from './Pages/SignUp'
+import Signup from './Pages/Signup'
 
 const theme = createTheme({
   palette: {
@@ -44,7 +44,7 @@ function App() {
       <Switch>
         <Route exact path='/' component={Home} />
         <Route path='/classes' component={Classes} />
-        <Route path='/signup' component={SignUp} />
+        <Route path='/signup' component={Signup} />
       </Switch>
     </ThemeProvider>
   );
