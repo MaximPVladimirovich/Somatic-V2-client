@@ -25,16 +25,14 @@ const useStyles = makeStyles((theme) => ({
 
 export default function PrimaryButton() {
   const classes = useStyles()
-
   return (
-    <Grid container direction="column" alignItems="center" justifyContent="space-between">
-      <Grid item xs={12}>
-        <Button className={classes.primary_btn} color="secondary" variant="outlined" >Get Started</Button>
-      </Grid>
-      <Grid item xs={12}>
-        <Button className={classes.secondary_btn} variant="outlined" >Explore classes</Button>
-      </Grid>
-    </Grid>
+    <Button className={classes.primary_btn} color="secondary" variant="outlined" >Get Started</Button>
+  )
+}
 
+export function SecondaryButton() {
+  const classes = useStyles()
+  return (
+    <Button className={classes.secondary_btn} variant="outlined" >Explore classes</Button>
   )
 }

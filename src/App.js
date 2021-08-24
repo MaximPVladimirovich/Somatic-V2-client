@@ -3,8 +3,13 @@ import { ThemeProvider } from '@material-ui/core/styles'
 import { createTheme } from '@material-ui/core/styles'
 import './App.css';
 import Navbar from './components/Navbar'
-import CardGrid from './components/gallery/CardGrid'
-import HomeImage from './components/home_image/Home_image'
+import { Route, Switch } from 'react-router-dom'
+
+
+// Pages
+import Home from './Pages/Home'
+import Classes from './Pages/classes'
+import SignUp from './Pages/SignUp'
 
 const theme = createTheme({
   palette: {
@@ -36,10 +41,12 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <Navbar />
-      <HomeImage />
-      <CardGrid />
+      <Switch>
+        <Route exact path='/' component={Home} />
+        <Route path='/classes' component={Classes} />
+        <Route path='/signup' component={SignUp} />
+      </Switch>
     </ThemeProvider>
-
   );
 }
 

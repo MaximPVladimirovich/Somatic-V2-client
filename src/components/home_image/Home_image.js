@@ -1,10 +1,13 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import Card from '@material-ui/core/Card'
+import Grid from '@material-ui/core/Grid'
 import CardMedia from '@material-ui/core/CardMedia'
 import CardActionArea from '@material-ui/core/CardActionArea'
 import PrimaryButton from '../Buttons/primary_button'
+import { SecondaryButton } from '../Buttons/primary_button'
 import Typography from '@material-ui/core/Typography'
+import { Link } from 'react-router-dom'
 
 const useStyles = makeStyles((theme) => ({
   media: {
@@ -33,7 +36,11 @@ export default function HomeImage() {
         </CardActionArea>
       </Card>
       <Typography className={classes.text}>Easily find the classes you want and start moving.</Typography>
-      <PrimaryButton ></PrimaryButton>
+      <Grid container direction='column' justifyContent='center' alignItems='center' >
+        <Link to="/signup"><PrimaryButton /></Link>
+        <Link to='/classes'><SecondaryButton /></Link>
+      </Grid>
+
     </>
   )
 }
